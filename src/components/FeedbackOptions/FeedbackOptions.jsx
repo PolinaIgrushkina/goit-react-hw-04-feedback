@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import { DivOfButtons, Button } from './FeedbackOptions.styled';
 
 function FeedbackOptions({ onLeaveFeedback, options }) {
-  return <DivOfButtons>
-      {options.map((option, index) =>
-        (< Button key={index} onClick={() => onLeaveFeedback(option)} type='button'>{option}</Button>)
+  return (<DivOfButtons>
+      {options.map((option) =>
+        (< Button key={option} onClick={() => onLeaveFeedback(option)} type='button'>{option}</Button>)
     )}
-    </DivOfButtons>
+    </DivOfButtons>)
 }
 
 FeedbackOptions.propTypes = {
